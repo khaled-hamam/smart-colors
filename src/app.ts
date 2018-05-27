@@ -1,5 +1,6 @@
 import express from "express";
 import morgan from "morgan";
+import Color from "./models/color";
 
 class App {
     public async start() {
