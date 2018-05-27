@@ -1,0 +1,10 @@
+.combination {
+    display: flex;
+    width: 600px;
+    height: 100px;
+}
+
+.color-zone {
+    background-color: red;
+    flex: auto;
+}
