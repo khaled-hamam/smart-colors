@@ -26,5 +26,8 @@
   },
   "nodemonConfig": {
     "ignore": ["data.json"]
+  },
+  "engines": {
+    "node": "8.4.0"
   }
 }
