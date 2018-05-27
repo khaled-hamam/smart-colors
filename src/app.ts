@@ -3,6 +3,7 @@ import morgan from "morgan";
 import path from "path";
 
 import controller from "./controllers/ColorController";
+import generator from "./lib/Generator";
 
 class App {
     public async start() {
@@ -15,7 +16,7 @@ class App {
         // Serving Static Files
         app.use(express.static('public'));
         // Using Morgan for Logging
-        app.use(morgan('combined'));
+        app.use(morgan('dev'));
 
         // Firing the Controller
         controller.start(app);
@@ -30,6 +31,8 @@ class App {
                 res.redirect('/');
             }
         });
+
+        generator.train({ input: [0,0,0,0,0,0,0,0,0], output: [0] });
     }
 }
 

@@ -1,5 +1,11 @@
-<div class="combination">
-    <div class="color-zone" style='background-color: <%= color %>'></div>
-    <div class="color-zone"></div>
-    <div class="color-zone"></div>
+<div class="color-panel">
+    <div class="combination">
+        <div class="color-zone" style='background-color: <%= combination.a.getRGB() %>'></div>
+        <div class="color-zone" style='background-color: <%= combination.b.getRGB() %>'></div>
+        <div class="color-zone" style='background-color: <%= combination.c.getRGB() %>'></div>
+        <label style="display: none"><%= JSON.stringify(combination) %></label>
+    </div>
+    <div class="rating">
+        <x-star-rating></x-star-rating>
+    </div>
 </div>

@@ -13,6 +13,10 @@ class Color {
         return [this.r / 255, this.g / 255, this.b / 255];
     }
 
+    public getRGB() {
+        return `rgb(${this.r}, ${this.g}, ${this.b})`;
+    }
+
     private setColor(value: number): number {
         if (value >= 0 && value <= 1) {
             return value * 255;

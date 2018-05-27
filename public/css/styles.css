@@ -1,5 +1,4 @@
 html, body {
-    display: flex;
     flex-direction: column;
     height: 100%;
 }
@@ -21,20 +20,63 @@ header {
 
 main {
     flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding: 25pt;
     display: flex;
     justify-content: center;
-    height: 100%;
     background-color: rgb(224, 230, 233);
+}
+
+.color-panel {
+    height: 100px;
+    width: 450px;
+    margin: 20pt;
+    position: relative;
 }
 
 .combination {
     display: flex;
-    width: 600px;
-    height: 100px;
+    backface-visibility: hidden;
 }
 
 .color-zone {
     background-color: red;
     flex: auto;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease;
+    opacity: 0;
+    background-color: rgba(0, 0, 0,0.3);
+}
+
+.combination, .rating {
+  width: 100%;
+  height: 100%;
+  position: absolute; 
+}
+
+.rating:hover {
+    opacity: 1;
+}
+
+x-star-rating {
+    font-family: 'Ionicons';
+    font-size: 24pt;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+x-star-rating > .star::after {
+    content: '\f3ae';
+    color: #333;
+}
+
+x-star-rating > .star.full::after {
+    content: '\f2fc';
+    color: #fd0;
 }
