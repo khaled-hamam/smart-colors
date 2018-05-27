@@ -1,6 +1,7 @@
 import express from "express";
 import morgan from "morgan";
 import Color from "./models/color";
+import generator from "./lib/Generator";
 
 class App {
     public async start() {

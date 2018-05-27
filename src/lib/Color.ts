@@ -10,11 +10,7 @@ class Color {
     }
 
     public getNormalizedColors() {
-        return {
-            r: this.r / 255,
-            g: this.g / 255,
-            b: this.b / 255
-        };
+        return [this.r / 255, this.g / 255, this.b / 255];
     }
 
     private setColor(value: number): number {
