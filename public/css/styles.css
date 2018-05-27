@@ -1,3 +1,33 @@
+html, body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+    flex: 0 1 auto;
+    height: 60pt;
+    padding-left: 25pt;
+    display: flex;
+    align-items: center;
+    background-color: #263238;
+    color: white;
+}
+
+.title {
+    font-family: 'Leckerli One', cursive;
+    font-size: 24pt;
+}
+
+main {
+    flex: 1;
+    padding: 25pt;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    background-color: rgb(224, 230, 233);
+}
+
 .combination {
     display: flex;
     width: 600px;
