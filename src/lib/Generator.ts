@@ -1,11 +1,16 @@
 import { ITrainingData } from "./ITrainingData.interface";
 import Color from "./Color";
+import DataRepository from "./DataRepository";
+
 const brain = require('brain.js');
 
 class Generator {
     constructor(private net: any = new brain.NeuralNetwork(), private dataset: ITrainingData[] = []) {
-        // TODO: Load Data set
-        this.trainDataSet();
+        // Load Data set
+        DataRepository.read().then(data => {
+            this.dataset = data;
+            this.trainDataSet();
+        });
     }
     
     get Net() {
@@ -25,7 +30,8 @@ class Generator {
             await this.net.trainAsync(this.dataset)
                 .then((data: any) => {
                     console.log('Training Successful');
-                    // TODO: Save the new Dataset
+                    // Save the new Dataset
+                    DataRepository.save(this.dataset);
                 })
                 .catch(() => {
                     console.error('Error occured in training');

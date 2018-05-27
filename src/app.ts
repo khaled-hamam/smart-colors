@@ -31,8 +31,6 @@ class App {
                 res.redirect('/');
             }
         });
-
-        generator.train({ input: [0,0,0,0,0,0,0,0,0], output: [0] });
     }
 }
 
