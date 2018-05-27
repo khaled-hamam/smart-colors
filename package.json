@@ -17,12 +17,14 @@
     "brain.js": "^1.2.1",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
+    "mkdirp": "^0.5.1",
     "morgan": "^1.9.0",
     "typescript": "^2.8.3"
   },
   "devDependencies": {
     "@types/body-parser": "^1.17.0",
     "@types/express": "^4.11.1",
+    "@types/mkdirp": "^0.5.2",
     "@types/morgan": "^1.7.35"
   },
   "nodemonConfig": {
