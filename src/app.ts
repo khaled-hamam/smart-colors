@@ -2,6 +2,8 @@ import express from "express";
 import morgan from "morgan";
 import path from "path";
 
+import controller from "./controllers/ColorController";
+
 class App {
     public async start() {
         const app: express.Application = express();
@@ -14,6 +16,9 @@ class App {
         app.use(express.static('public'));
         // Using Morgan for Logging
         app.use(morgan('combined'));
+
+        // Firing the Controller
+        controller.start(app);
 
         const PORT = process.env.PORT || 3000;
         app.listen(PORT, () => {
